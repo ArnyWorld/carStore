@@ -1,0 +1,97 @@
+.main {
+    position: relative;
+    video {
+        width: 100%;
+        @include tablet {
+            display: none;
+        }
+    }
+    #containerC {
+        margin-bottom: 0;
+        position: absolute;
+        top: 100px;
+        left: 15%;
+        @include tablet {
+            position: relative;
+            top: 0px;
+            left: 0;
+        }
+        .formulario {
+            background-color: rgba(255, 255, 255, .3);
+            padding: 25px;
+            border-radius: 8px;
+            .grupo {
+                display: flex;
+                justify-content: space-between;
+                @include tablet {
+                    flex-direction: column;
+                }
+                .form {
+                    flex-basis: calc(45% - 2rem);
+                    border-radius: 8px;
+                    margin-bottom: 15px;
+                    @include computadora {
+                        flex-basis: calc(50% - 1rem);
+                    }
+                    legend {
+                        color: $colorFondoPrimario;
+                        font-size: 1.4rem;
+                        font-family: $fuenteSecundaria;
+                    }
+                    input,
+                    label,
+                    span {
+                        display: block;
+                        font-family: $fuenteSecundaria;
+                    }
+                    label {
+                        font-size: 1.2rem;
+                        font-family: $fuenteSecundaria;
+                    }
+                    input {
+                        width: 100%;
+                        background-color: $fondoBarra;
+                        color: $colorTexto;
+                        padding: 3px;
+                        border: none;
+                        margin-bottom: 10px;
+                    }
+                    textarea {
+                        width: 100%;
+                        background-color: $fondoBarra;
+                        color: $colorTexto;
+                    }
+                    .contacto {
+                        display: inline;
+                        width: auto;
+                    }
+                    span {
+                        color: $colorFondoPrimario;
+                        margin-bottom: 7px;
+                        font-weight: bold;
+                        font-style: italic;
+                        font-size: 0.9rem;
+                    }
+                    input[type="radio"] {
+                        display: inline;
+                        width: auto;
+                    }
+                }
+            }
+            input[type="submit"] {
+                display: block;
+                @include boton(transparent, $colorFondoPrimario);
+                width: 150px;
+                padding: 8px 0;
+                border: 1px solid $colorFondoPrimario;
+                transition: transform .3s ease-in;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                @include tablet {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

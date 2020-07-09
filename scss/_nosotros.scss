@@ -1,0 +1,87 @@
+#headerS {
+    height: auto;
+}
+
+#barraS {
+    background-color: $fondoBarraS;
+}
+
+.main {
+    .container {
+        .nosotros {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            @include computadora {
+                flex-direction: column;
+            }
+            .imgNosotros {
+                flex-basis: 45%;
+                align-self: center;
+                @include computadora {
+                    flex-basis: 100%;
+                    margin-bottom: 2rem;
+                }
+                img {
+                    width: 100%;
+                    box-shadow: 5px 5px 8px black;
+                }
+            }
+            .descripcion {
+                flex-basis: 45%;
+                p {
+                    font-size: 1.4rem;
+                    line-height: 2.5rem;
+                    font-family: $fuenteSecundaria;
+                    @include tablet {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        .masNosotros {
+            h3 {
+                text-align: center;
+            }
+            .iconosNosotros {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @include telefono {
+                    flex-direction: column;
+                }
+                .icoNosotros {
+                    flex-basis: calc(33% - 1rem);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @include tablet {
+                        flex-basis: calc(45% - 1rem);
+                    }
+                    @include telefono {
+                        flex-basis: 100%;
+                    }
+                    h4 {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: $colorFondoPrimario;
+                        ;
+                        font-family: $fuentePrimaria;
+                        text-align: center;
+                    }
+                    img {
+                        width: 140px;
+                        height: 140px;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 2.2rem;
+                        font-family: $fuenteSecundaria;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

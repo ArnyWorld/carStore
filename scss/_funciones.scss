@@ -1,0 +1,26 @@
+@mixin boton($colorF, $colorT) {
+    background-color: $colorF;
+    color: $colorT;
+    border-radius: 7px;
+    font-weight: bold;
+    font-family: $fuenteSecundaria;
+    cursor: pointer;
+}
+
+@mixin computadora() {
+    @media (max-width:#{$computadora}) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (max-width:#{$tablet}) {
+        @content;
+    }
+}
+
+@mixin telefono() {
+    @media (max-width:#{$telefono}) {
+        @content;
+    }
+}

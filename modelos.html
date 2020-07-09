@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="header" id="headerS">
+        <div class="barra" id="barraS">
+            <div class="container menu-navegacion">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo carSTORE">
+                    </a>
+                </div>
+                <div class="movil">
+                    <!--div class="hamburguesa"-->
+                    <input type="checkbox" id="icono">
+                    <label for="icono" class="hamburguesa">
+                            <img src="img/menu.png" alt="Menú Hamburguesa">
+                    </label>
+                    <!--/div-->
+                    <nav class="menu">
+                        <ul class="navegacion">
+                            <li class="enlace">
+                                <a href="index.html">Inicio</a>
+                            </li>
+                            <li class="enlace">
+                                <a href="nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="enlace">
+                                <a href="modelos.html">Modelos</a>
+                            </li>
+                            <li class="enlace">
+                                <a href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--cierre-contenedor-navegacion-->
+                <nav class="menu">
+                    <ul class="navegacion">
+                        <li class="enlace">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="modelos.html">Modelos</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="principal">
+
+                <h2>Deportivos</h2>
+                <section class="principal">
+                    <div class="targetas">
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/auto1.jpg" alt="Automovil 1">
+                            <h3>Car 1</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>65L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/auto2.jpg" alt="Automovil 2">
+                            <h3>Car 2</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>50L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/auto3.jpg" alt="Automovil 3">
+                            <h3>Car 3</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>55L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+
+                    </div>
+                    <h2>Buses</h2>
+                    <div class="targetas">
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/bus1.jpg" alt="Bus 1">
+                            <h3>Car 1</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>65L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/bus2.jpg" alt="Bus 2">
+                            <h3>Car 2</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>50L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/bus3.jpg" alt="Bus 3">
+                            <h3>Car 3</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>55L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+
+                    </div>
+                    <h2>Camionetas</h2>
+                    <div class="targetas">
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/camioneta1.jpg" alt="Camioneta 1">
+                            <h3>Car 1</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>65L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/camioneta2.jpg" alt="Camioneta 2">
+                            <h3>Car 2</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>50L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/camioneta3.jpg" alt="Camioneta 3">
+                            <h3>Car 3</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>55L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+
+                    </div>
+
+                    <h2>Maquinarias</h2>
+                    <div class="targetas">
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/maquinaria1.jpg" alt="Maquinaria 1">
+                            <h3>Car 1</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>65L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/maquinaria2.jpg" alt="Maquinaria 2">
+                            <h3>Car 2</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>50L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/maquinaria3.jpg" alt="Maquinaria 3">
+                            <h3>Car 3</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>55L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+
+                    </div>
+
+                    <h2>Vagonetas</h2>
+                    <div class="targetas">
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/vagoneta1.jpg" alt="Vagoneta 1">
+                            <h3>Car 1</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>65L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/vagoneta2.jpg" alt="Vagoneta 2">
+                            <h3>Car 2</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>50L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+                        <div class="targeta">
+                            <img class="imgTargeta" src="img/vagoneta3.jpg" alt="Vagoneta 3">
+                            <h3>Car 3</h3>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quibusdam nostrum dolorem! Mollitia totam</p>
+                            <div class="detalles">
+                                <div class="rueda detalle">
+                                    <img class="imgDetalle" src="img/rueda.svg" alt="Rueda">
+                                    <span>4</span>
+                                </div>
+                                <div class="galon detalle">
+                                    <img class="imgDetalle" src="img/combustible.svg" alt="combustible">
+                                    <span>55L</span>
+                                </div>
+                                <div class="persona detalle">
+                                    <img class="imgDetalle" src="img/usuario.svg" alt="Usuario">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button class="boton"> Ver detalles</button>
+                        </div>
+
+
+                    </div>
+                </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <img data-aos="flip-left" class="lateralI" src="img/lateral.jpg" alt="lateral Izquierdo">
+        <img data-aos="flip-right" class="lateralD" src="img/lateralD.png" alt="lateral Derecho">
+        <div class="contenidoFooter container">
+
+            <div class="servicios detalleF">
+                <h4>servicios</h4>
+                <ul>
+                    <li>Mantenimiento</li>
+                    <li>Cotizaciones</li>
+                    <li>Solicitud de repuesto</li>
+                    <li>Revisión Vehicular</li>
+                </ul>
+            </div>
+            <div class="nosotros detalleF">
+                <h4>nosotros</h4>
+                <ul>
+                    <li>Sobre la empresa</li>
+                    <li>Sucursales</li>
+                    <li>Horarios de atención</li>
+                </ul>
+            </div>
+            <div class="redes detalleF">
+                <h4>siguenos</h4>
+
+                <div class="sociales">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Todos los derechos reservados - carSTORE 2020</p>
+        </div>
+    </footer>
+</body>
+
+</html>

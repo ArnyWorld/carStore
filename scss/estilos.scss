@@ -1,0 +1,531 @@
+* {
+    box-sizing: border-box;
+}
+
+@import 'variables';
+@import 'funciones';
+@import 'nosotros';
+@import 'contacto';
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    @include tablet {
+        width: 80%;
+    }
+    @include telefono {
+        width: 90%;
+    }
+}
+
+.header {
+    height: 88vh;
+    position: relative;
+    .barra {
+        background-color: $fondoBarra;
+        .menu-navegacion {
+            display: flex;
+            @include tablet {
+                flex-direction: column;
+            }
+            .logo {
+                padding: 10px;
+                width: 40%;
+                @include tablet {
+                    width: 100%;
+                    text-align: left;
+                }
+                img {
+                    z-index: 1000;
+                    width: 150px;
+                    @include telefono {
+                        width: 100px;
+                        margin-top: 7px;
+                    }
+                }
+            }
+            .movil {
+                display: none;
+                input[type="checkbox"] {
+                    display: none;
+                }
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                    margin-top: 5px;
+                    img {
+                        width: 35px;
+                    }
+                }
+                .menu {
+                    display: none;
+                }
+                @include tablet {
+                    input[type="checkbox"] {
+                        &:checked~.menu {
+                            display: block;
+                        }
+                    }
+                    display: block;
+                    width: 100%;
+                    margin-top: -45px;
+                    label {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-bottom: 15px;
+                        cursor: pointer;
+                    }
+                    .menu {
+                        display: none;
+                        .navegacion {
+                            flex-direction: column;
+                            align-items: start;
+                            .enlace {
+                                margin-bottom: 17px;
+                                transition: transform .3s ease-in;
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .menu {
+                width: 60%;
+                @include tablet {
+                    width: 100%;
+                    display: none;
+                }
+                .navegacion {
+                    display: flex;
+                    justify-content: space-around;
+                    @include telefono {
+                        flex-direction: column;
+                        align-items: center;
+                        padding-left: 0;
+                    }
+                    .enlace {
+                        list-style: none;
+                        a {
+                            color: $colorTexto;
+                            font-size: 1.3rem;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-image: url(../img/banner.jpg);
+        width: 100%;
+        height: 88vh;
+        background-size: cover;
+        background-position: center center;
+    }
+    .texto-header {
+        position: absolute;
+        bottom: 50px;
+        @include tablet {
+            bottom: 15px;
+        }
+        h1 {
+            color: $colorTexto;
+            font-size: 2.7rem;
+            font-family: $fuentePrimaria;
+            @include tablet {
+                font-size: 2.4rem;
+            }
+            @include telefono {
+                font-size: 2.2rem;
+            }
+        }
+        p {
+            color: $colorTexto;
+            font-size: 1.6rem;
+        }
+        .botonH {
+            background-color: $colorTexto;
+            width: 150px;
+            height: 55px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 8px;
+            img {
+                width: 30px;
+            }
+            span {
+                font-size: 1.4rem;
+                font-weight: bold;
+                font-family: $fuenteSecundaria;
+            }
+        }
+    }
+}
+
+.main {
+    .container {
+        margin-bottom: 45px;
+        h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            font-family: $fuentePrimaria;
+            color: $colorFondoPrimario;
+        }
+        .principal {
+            .targetas {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 25px;
+                @include telefono {
+                    justify-content: center
+                }
+                .targeta {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: calc(33% - 1rem);
+                    padding: 10px;
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    @include computadora {
+                        flex-basis: calc(50% - 0.5rem);
+                        margin-bottom: 25px;
+                    }
+                    @include telefono {
+                        flex-basis: calc(100% - 1rem);
+                    }
+                    .imgTargeta {
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 5px;
+                        background-color: lightblue;
+                    }
+                    h3 {
+                        font-size: 1.8rem;
+                        color: $colorFondoPrimario;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    p {
+                        font-size: 1.1rem;
+                        line-height: 1.3;
+                        text-align: justify;
+                    }
+                    .detalles {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 30px;
+                        .detalle {
+                            flex-grow: 0;
+                            flex-shrink: 0;
+                            flex-basis: calc(33% - 1rem);
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            .imgDetalle {
+                                width: 45px;
+                            }
+                        }
+                    }
+                    .boton {
+                        @include boton($colorFondoSecundario, $colorTexto);
+                        padding: 7px 0;
+                        width: 100%;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .variedad {
+                border: 1px solid $colorFondoSecundario;
+                border-radius: 5px;
+                padding: 15px;
+                h3 {
+                    font-size: 1.8rem;
+                    color: $colorFondoPrimario;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 25px;
+                    font-family: $fuentePrimaria;
+                }
+                .vehiculos {
+                    display: flex;
+                    padding: 15px;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                    .vehiculo {
+                        background-color: $colorFondoPrimario;
+                        border-radius: 5px;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        padding: 10px 35px;
+                        width: 18%;
+                        @include computadora {
+                            width: 23%;
+                            padding: 10px 15px;
+                            margin-bottom: 25px;
+                        }
+                        @include tablet {
+                            width: 30%;
+                            padding: 10px 8px 10px 15px;
+                        }
+                        @include telefono {
+                            width: 45%;
+                            margin-bottom: 25px;
+                        }
+                        input[type=checkbox] {
+                            background-color: yellow;
+                            width: 20px;
+                            height: 20px;
+                            margin-bottom: 20px;
+                        }
+                        label {
+                            img {
+                                width: 100%;
+                                height: 75px;
+                                @include tablet {
+                                    //width: 80%;
+                                    height: 65px;
+                                }
+                            }
+                        }
+                        span {
+                            color: $colorTexto;
+                            font-size: 1.2rem;
+                            display: block;
+                            text-align: center;
+                            font-family: $fuenteSecundaria;
+                            @include telefono {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .boton {
+                    @include boton($colorFondoSecundario, $colorTexto);
+                    width: 25%;
+                    padding: 10px 0;
+                    display: block;
+                    font-size: 1.4rem;
+                    margin: 0 auto;
+                    @include tablet {
+                        width: 45%;
+                    }
+                    @include telefono {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .parallax {
+        background-image: url(../img/pallarax.jpg);
+        width: 100%;
+        height: 75vh;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        position: relative;
+        margin-bottom: 35px;
+        .contenidoP {
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: $colorTexto;
+                font-size: 1.9rem;
+                margin-bottom: 35px;
+                @include telefono {
+                    text-align: center;
+                }
+            }
+            img {
+                width: 320px;
+                margin-bottom: 35px;
+                @include telefono {
+                    width: 250px;
+                }
+            }
+            .boton {
+                @include boton(transparent, $colorTexto);
+                border: 1px solid $colorTexto;
+                display: flex;
+                padding: 5px 15px;
+                justify-content: space-between;
+                align-items: center;
+                width: 250px;
+                transition: transform .5s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                img {
+                    width: 50px;
+                    margin-bottom: 0;
+                }
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .container {
+        h3 {
+            font-size: 1.8rem;
+            color: $colorFondoPrimario;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 35px;
+            font-family: $fuentePrimaria;
+        }
+        .soporte {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                width: 350px;
+                @include telefono {
+                    width: 300px;
+                }
+            }
+            .soporteT {
+                flex-basis: 50%;
+                p {
+                    font-size: 1.4rem;
+                    line-height: 2.5rem;
+                    font-family: $fuenteSecundaria;
+                }
+                .boton {
+                    @include boton($colorFondoSecundario, $colorTexto);
+                    padding: 6px 40px;
+                    font-size: 1.4rem;
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .sucursales {
+            h3 {
+                font-size: 1.8rem;
+                color: $colorFondoPrimario;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 35px;
+                font-family: $fuentePrimaria;
+            }
+        }
+    }
+    .mapa {
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 35px;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $colorFondoPrimario;
+    position: relative;
+    .lateralI {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 245px;
+        opacity: .5;
+        @include tablet {
+            display: none;
+        }
+    }
+    .lateralD {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 245px;
+        opacity: .5;
+        @include tablet {
+            display: none;
+        }
+    }
+    .contenidoFooter {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        @include tablet {
+            flex-direction: column;
+        }
+        .detalleF {
+            flex-basis: calc(25% - 1rem);
+        }
+        .servicios,
+        .nosotros {
+            h4 {
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 1.3rem;
+                color: $colorTexto;
+                font-family: $fuentePrimaria;
+                text-align: center;
+            }
+            ul {
+                color: $colorTexto;
+                list-style: none;
+                font-weight: 400;
+                font-family: $fuenteSecundaria;
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .redes {
+            h4 {
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 1.3rem;
+                color: $colorTexto;
+                font-family: $fuentePrimaria;
+                text-align: center;
+            }
+            .sociales {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    font-size: 1.5rem;
+                    color: $colorTexto;
+                    transition: transform .3s ease-in;
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+    .copy {
+        background-color: $colorFondoSecundario;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            text-align: center;
+            color: $colorTexto;
+            font-size: 1.4rem;
+        }
+    }
+}
